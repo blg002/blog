@@ -1,0 +1,9 @@
+<%= form_for(@user) do |user_form| %>
+	<ul>
+		<li>
+		    <%= user_form.label :title %><br />
+		    <%= user_form.text_field :title %>
+		</li>
+		<li class="button"><%= user_form.submit %></li>
+	</ul>
+<% end %>
