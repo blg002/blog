@@ -5,3 +5,5 @@ gem 'sqlite3'
 
 gem 'sass', '~> 3.1'
 gem 'compass', '~> 0.11.5'
+
+gem 'heroku', '~> 2.14.0'
