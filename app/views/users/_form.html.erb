@@ -1,8 +1,16 @@
 <%= form_for(@user) do |user_form| %>
 	<ul>
 		<li>
-		    <%= user_form.label :title %><br />
-		    <%= user_form.text_field :title %>
+		    <%= user_form.label :name %><br />
+		    <%= user_form.text_field :name %>
+		</li>
+		<li>
+		    <%= user_form.label :user_name %><br />
+		    <%= user_form.text_field :user_name %>
+		</li>
+		<li>
+		    <%= user_form.label :password %><br />
+		    <%= user_form.password_field :password %>
 		</li>
 		<li class="button"><%= user_form.submit %></li>
 	</ul>

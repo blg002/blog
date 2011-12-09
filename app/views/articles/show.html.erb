@@ -2,7 +2,7 @@
 
 <p><%= @article.created_at.strftime("Published on %m/%d/%Y") %></p>
 
-<p>Written by <%= link_to @article.user.title, @article.user %></p>
+<p>Written by <%= link_to @article.user.name, @article.user %></p>
 
 <div class="entry-content">
 	<%= @article.body %>
