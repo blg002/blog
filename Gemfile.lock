@@ -108,6 +108,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby (~> 3.0.1)
   compass (~> 0.11.5)
   heroku (~> 2.14.0)
   pg
