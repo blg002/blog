@@ -5,6 +5,21 @@
 </head>
 <body>
 
+<div id="user-nav">
+	<% if current_user %>
+		<p>Signed in as <%= current_user.name %></p>
+		<p><%= link_to 'Sign out', sign_out_path %></p>
+		<p><%= link_to 'Create an article', new_article_path %></p>
+		<p><%= link_to 'Create a user', new_user_path %></p>
+	<% else %>
+		<p><%= link_to 'Sign in', sign_in_path %></p>
+	<% end %>
+</div><!-- /#user-nav -->
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
 <%= yield %>
 
 </body>
