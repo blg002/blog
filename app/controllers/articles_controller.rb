@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
-  before_filter :get_tweet, :only => [:show, :edit, :update, :destroy]
+  before_filter :get_article, :only => [:show, :edit, :update, :destroy]
   before_filter :current_user?, :only => [:new, :create, :update, :destroy]
   
-  def get_tweet
+  def get_article
     @article = Article.find(params[:id])
   end
   
