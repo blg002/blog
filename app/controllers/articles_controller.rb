@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_filter :get_article, :only => [:show, :edit, :update, :destroy]
-  before_filter :current_user?, :only => [:new, :create, :update, :destroy]
   
   def get_article
     @article = Article.find(params[:id])
@@ -8,12 +7,6 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all
-  end
-
-  def current_user?
-    unless current_user
-      redirect_to root_url, :notice => "Please sign in"
-    end
   end
   
   def new
