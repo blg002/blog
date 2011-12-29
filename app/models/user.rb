@@ -5,9 +5,11 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   
   validates :name,      :presence => true
+  validates :email,     :presence => true
   validates :user_name, :presence => true,
                         :uniqueness => true
-  validates :password,  :presence => true
+  validates :password,  :presence => true,
+                        :length => { :minimum => 7 }
   
   has_many :articles
   

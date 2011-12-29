@@ -13,5 +13,5 @@
 <% if current_user %>
 	<h2>Article admin</h2>
 	<p><%= link_to 'Edit this article', edit_article_path(@article) %></p>
-	<p><%= link_to 'Delete this article!', @article, :method => :delete %></p>
+	<p><%= link_to 'Delete this article!', @article, :confirm => "Are you sure?", :method => :delete %></p>
 <% end %>

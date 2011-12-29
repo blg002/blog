@@ -17,7 +17,9 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
-      redirect_to @user
+      redirect_to @user, notice: 'Zombie was successfully created.'
+    else
+      render action: "new"
     end
   end
 

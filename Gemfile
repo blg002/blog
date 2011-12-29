@@ -17,3 +17,5 @@ gem 'heroku', '~> 2.14.0'
 
 gem 'bcrypt-ruby', '~> 3.0.1' , :require => 'bcrypt'
 # gem 'devise', '~> 1.5.2'
+
+gem "awesome_print", "~> 1.0.2"
