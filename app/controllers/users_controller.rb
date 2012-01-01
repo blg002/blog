@@ -17,9 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
-      redirect_to @user, notice: 'Zombie was successfully created.'
-    else
-      render action: "new"
+      redirect_to @user
     end
   end
 
@@ -31,5 +29,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
+    flash[:notice] = "User gone!"
+    redirect_to user_url
   end
 end

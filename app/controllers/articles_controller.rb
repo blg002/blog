@@ -23,12 +23,13 @@ class ArticlesController < ApplicationController
   
   def update
     @article.update_attributes(params[:article])
+    
     redirect_to @article
   end
   
   def destroy
     @article.destroy
-    flash[:notice] = "Deleted!"
+    flash[:notice] = "Article gone!"
     redirect_to articles_url
   end
 end
