@@ -2,7 +2,7 @@
 	<ul>
 		<li>
 			<%= article_form.label :user_id %>
-			<%= article_form.select(:user_id, options_from_collection_for_select(User.all, :id, :name), :include_blank => true) %>
+			<%= select('article', 'user_id', User.all.collect {|u| [ u.name, u.id ] }, { :include_blank => true }) %>
 		</li>
 		<li>
 			<%= article_form.label :title %>
