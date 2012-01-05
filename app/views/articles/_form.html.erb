@@ -1,16 +1,16 @@
 <%= form_for(@article) do |article_form| %>
 	<ul>
 		<li>
-			<%= article_form.label :user_id %><br />
+			<%= article_form.label :user_id %>
 			<%= article_form.select(:user_id, options_from_collection_for_select(User.all, :id, :name), :include_blank => true) %>
 		</li>
 		<li>
-		    <%= article_form.label :title %><br />
-		    <%= article_form.text_field :title %>
+			<%= article_form.label :title %>
+			<%= article_form.text_field :title %>
 		</li>
 		<li>
-		    <%= article_form.label :body %><br />
-		    <%= article_form.text_area :body %>
+			<%= article_form.label :body %>
+			<%= article_form.text_area :body %>
 		</li>
 		<li class="button"><%= article_form.submit %></li>
 	</ul>

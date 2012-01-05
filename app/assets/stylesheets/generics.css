@@ -2,8 +2,8 @@
    Base
    ========================================================================== */
 
-html { font-size:100%; overflow-y:scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; background-color:#bada55; }
-body { margin:0 auto 36px; max-width:960px; background-color:rgba(255,255,255,0.8); font-size:1em; line-height:1.4; }
+html { font-size:100%; overflow-y:scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+body { margin:0 auto 36px; padding:3.375em 0 4.125em; max-width:960px; font-size:1em; line-height:1.4; background-color:#bada55; }
 body, button, input, select, textarea { font-family:sans-serif; color:#222; }
 
 ::-moz-selection { background:#fe57a1; color:#fff; text-shadow:none; }
@@ -45,6 +45,8 @@ sub { bottom:-0.25em; }
 ul, ol { margin:1em 0; padding:0 0 0 40px; }
 dd { margin:0 0 0 40px; }
 nav ul, nav ol { list-style:none; list-style-image:none; margin:0; padding:0; }
+.inll { padding-left:0; width:auto; overflow:hidden; list-style:none; }
+.inll li, .inll a { margin-right:5px; display:block; float:left; }
 
 img { border:0; -ms-interpolation-mode:bicubic; vertical-align:middle; }
 svg:not(:root) { overflow:hidden; }

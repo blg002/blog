@@ -1,20 +1,20 @@
 <%= form_for(@user) do |user_form| %>
 	<ul>
 		<li>
-		    <%= user_form.label :name %><br />
-		    <%= user_form.text_field :name %>
+			<%= user_form.label :name %>
+			<%= user_form.text_field :name %>
 		</li>
 		<li>
-		    <%= user_form.label :user_name %><br />
-		    <%= user_form.text_field :user_name %>
+			<%= user_form.label :user_name %>
+			<%= user_form.text_field :user_name %>
 		</li>
 		<li>
-		    <%= user_form.label :email %><br />
-		    <%= user_form.email_field :email %>
+			<%= user_form.label :email %>
+			<%= user_form.email_field :email %>
 		</li>
 		<li>
-		    <%= user_form.label :password %><br />
-		    <%= user_form.password_field :password %>
+			<%= user_form.label :password %>
+			<%= user_form.password_field :password %>
 		</li>
 		<li class="button"><%= user_form.submit %></li>
 	</ul>
