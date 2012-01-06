@@ -2,10 +2,10 @@ source "http://rubygems.org"
 
 # bundle --without production
 
-# group :production do
-#   gem 'therubyracer-heroku', '0.8.1.pre3'
-#   gem 'pg'
-# end
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'pg'
+end
 
 gem 'rails', '3.1.3'
 gem 'sqlite3'
