@@ -32,6 +32,6 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     flash[:notice] = "User gone!"
-    redirect_to user_url
+    redirect_to users_url
   end
 end
