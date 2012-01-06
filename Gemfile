@@ -5,6 +5,7 @@ source "http://rubygems.org"
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'pg'
+	gem 'uglifier'
 end
 
 gem 'rails', '3.1.3'
