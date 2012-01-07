@@ -3,7 +3,7 @@ Blog::Application.routes.draw do
   get 'sign_out' => 'sessions#destroy', :as => 'sign_out'
 
   resources :articles
-  resources :users
+  resources :authors
   resources :sessions
     
   root :to => 'Articles#index'

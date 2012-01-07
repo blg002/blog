@@ -1,14 +1,14 @@
 class SessionsController < ApplicationController
-  skip_before_filter :current_user?
+  skip_before_filter :current_author?
   
   def new
   end
 
   def create
-    user = User.authenticate(params[:user_name], params[:password])
+    author = Author.authenticate(params[:user_name], params[:password])
     
-    if user
-      session[:user_id] = user.id
+    if author
+      session[:author_id] = author.id
       redirect_to root_url, :notice => "Signed in!"
     else
       flash.now.alert = "Invalid email or password"
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    session[:user_id] = nil
+    session[:author_id] = nil
     redirect_to root_url, :notice => "Signed out!"
   end
 end

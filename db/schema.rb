@@ -11,19 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111228025908) do
+ActiveRecord::Schema.define(:version => 20120107153137) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.integer  "user_id"
+    t.integer  "author_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "articles", ["user_id"], :name => "index_articles_on_user_id"
+  add_index "articles", ["author_id"], :name => "index_articles_on_user_id"
 
-  create_table "users", :force => true do |t|
+  create_table "authors", :force => true do |t|
     t.string   "name"
     t.string   "user_name"
     t.string   "email"

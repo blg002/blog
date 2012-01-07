@@ -12,8 +12,8 @@
 
 	<ul>
 		<li>
-			<%= article_form.label :user_id %>
-			<%= select('article', 'user_id', User.all.collect {|u| [ u.name, u.id ] }, { :include_blank => true }) %>
+			<%= article_form.label :author_id %>
+			<%= select('article', 'author_id', Author.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true }) %>
 		</li>
 		<li>
 			<%= article_form.label :title %>

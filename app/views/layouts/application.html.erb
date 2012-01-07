@@ -25,18 +25,18 @@
 <nav>
 	<ul class="inll">
 		<li><%= link_to 'Archive', articles_path %></li>
-		<li><%= link_to 'Authors', users_path %></li>
+		<li><%= link_to 'Authors', authors_path %></li>
 	</ul>
 </nav>
 
 <%= yield %>
 
 <div id="menu">
-	<% if current_user %>
-		<p>Signed in as <%= link_to current_user.name, current_user %>, <%= link_to 'Sign out', sign_out_path %></p>
+	<% if current_author %>
+		<p>Signed in as <%= link_to current_author.name, current_author %>, <%= link_to 'Sign out', sign_out_path %></p>
 		<ul class="inll">
 			<li><%= link_to 'Create an article', new_article_path %></li>
-			<li><%= link_to 'Add an author', new_user_path %></li>
+			<li><%= link_to 'Add an author', new_author_path %></li>
 		</ul>
 	<% else %>
 		<p><%= link_to 'Sign in', sign_in_path %></p>

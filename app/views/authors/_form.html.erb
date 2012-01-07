@@ -1,0 +1,32 @@
+<%= form_for(@author) do |author_form| %>
+	<% if @author.errors.any? %>
+    <div class="error">
+      <h2><%= pluralize(@author.errors.count, "error") %> prohibited this article from being saved:</h2>
+      <ul>
+      <% @author.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<ul>
+		<li>
+			<%= author_form.label :name %>
+			<%= author_form.text_field :name %>
+		</li>
+		<li>
+			<%= author_form.label :user_name %>
+			<%= author_form.text_field :user_name %>
+		</li>
+		<li>
+			<%= author_form.label :email %>
+			<%= author_form.email_field :email %>
+		</li>
+		<li>
+			<%= author_form.label :password %>
+			<%= author_form.password_field :password %>
+		</li>
+		<li class="button"><%= author_form.submit %></li>
+	</ul>
+<% end %>
