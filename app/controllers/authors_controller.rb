@@ -6,7 +6,7 @@ class AuthorsController < ApplicationController
   end
   
   def index
-    @authors = Author.all
+    @authors = Author.includes(:articles).all
   end
   
   def new
