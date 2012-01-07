@@ -11,7 +11,7 @@ class Author < ActiveRecord::Base
   validates :password,  :presence => true,
                         :length => { :minimum => 7 }
   
-  has_many :articles
+  has_many :articles, dependent: :destroy
   
   def to_param
     "#{id}-#{name.parameterize}"
