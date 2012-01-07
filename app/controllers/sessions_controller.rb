@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     
     if author
       session[:author_id] = author.id
-      redirect_to root_url, :notice => "Signed in!"
+      redirect_to root_url, notice: "Signed in!"
     else
       flash.now.alert = "Invalid email or password"
       render "new"
@@ -18,6 +18,6 @@ class SessionsController < ApplicationController
   
   def destroy
     session[:author_id] = nil
-    redirect_to root_url, :notice => "Signed out!"
+    redirect_to root_url, notice: "Signed out!"
   end
 end
