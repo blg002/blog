@@ -5,6 +5,8 @@ class Article < ActiveRecord::Base
   validates :body,    :presence => true
   
   belongs_to :author
+  has_many   :categorizations
+  has_many   :categories, through: :categorizations
   
   def to_param
     "#{id}-#{title.parameterize}"
