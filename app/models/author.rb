@@ -1,17 +1,17 @@
 class Author < ActiveRecord::Base
-  attr_accessible :name, :user_name, :email, :password
-
-  attr_accessor :password
-  before_save :encrypt_password
-  
   validates :name,      :presence => true
   validates :email,     :presence => true
   validates :user_name, :presence => true,
                         :uniqueness => true
   validates :password,  :presence => true,
                         :length => { :minimum => 7 }
-  
+
+  attr_accessible :name, :user_name, :email, :password
+
   has_many :articles, dependent: :destroy
+
+  attr_accessor :password
+  before_save :encrypt_password
   
   def to_param
     "#{id}-#{name.parameterize}"
