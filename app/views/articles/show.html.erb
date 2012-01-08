@@ -5,13 +5,13 @@
 		<div class="article-meta">
 			<p class="date"><time datetime="<%= @article.created_at.strftime("%Y-	%m-%d:%H:%M%z") %>" class="published updated" pubdate><%= @article.created_at.strftime("#{@article.created_at.day.ordinalize} %b %Y") %></time></p>
 			<p class="vcard author">by <%= link_to @article.author.name, @article.author, class: 'fn n' %></p>
+
+			<ul class="nl categories">
+				<% @article.categories.each do |category| %>
+					<li><%= link_to category.name, category, rel: 'tag' %></li>
+				<% end %>
+			</ul>
 		</div>
-		
-		<ul>
-			<% @article.categories.each do |category| %>
-				<li><%= link_to category.name, category, rel: 'tag' %></li>
-			<% end %>
-		</ul>
 		
 		<% if current_author %>
 			<ul class="inll article-actions">
