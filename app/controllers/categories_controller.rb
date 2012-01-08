@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_filter :get_category, :only => [:show, :edit, :update, :destroy]
+  before_filter :get_category, only: [:show, :edit, :update, :destroy]
   
   def get_category
     @category = Category.find(params[:id])

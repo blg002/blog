@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  before_filter :get_author, :only => [:show, :edit, :update, :destroy]
+  before_filter :get_author, only: [:show, :edit, :update, :destroy]
   
   def get_author
     @author = Author.find(params[:id])

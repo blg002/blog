@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :get_article, :only => [:show, :edit, :update, :destroy]
+  before_filter :get_article, only: [:show, :edit, :update, :destroy]
   
   def get_article
     @article = Article.find(params[:id])

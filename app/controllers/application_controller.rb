@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_author
-  before_filter :current_author?, :only => [:new, :create, :update, :destroy]
+  before_filter :current_author?, only: [:new, :create, :update, :destroy]
 
   def current_author?
     unless current_author
-      redirect_to root_url, :notice => "Please sign in"
+      redirect_to root_url, notice: "Please sign in"
     end
   end
   
