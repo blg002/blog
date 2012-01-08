@@ -1,7 +1,7 @@
 <h1>Categories</h1>
 
 <ul>
-<% @categories.each do |category| %>
-	<li><%= link_to category.name, category %> (<%= category.articles.length %>)</li>
-<% end %>
+	<% @categories.each do |category| %>
+		<li><%= link_to category.name, category %> (<%= category.articles.length %>)</li>
+	<% end %>
 </ul>
