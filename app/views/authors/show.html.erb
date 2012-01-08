@@ -16,6 +16,7 @@
 				<h2 class="entry-title"><%= link_to article.title, article, rel: 'bookmark' %></h2>
 				<div class="entry-summary">
 					<%= raw truncate(article.body, length: 300) %>
+					<p><%= link_to 'Read more', article, rel: 'nofollow' %></p>
 				</div>
 			</article>
 		<% end %>
