@@ -34,12 +34,12 @@
 
 <div id="menu">
 	<% if current_author %>
-		<p>Signed in as <%= link_to current_author.name, current_author %>, <%= link_to 'Sign out', sign_out_path %></p>
 		<ul class="inll">
 			<li><%= link_to 'Create an article', new_article_path %></li>
 			<li><%= link_to 'Add an author', new_author_path %></li>
 			<li><%= link_to 'Create a category', new_category_path %></li>
 		</ul>
+		<p>Signed in as <%= link_to current_author.name, current_author %>, <%= link_to 'Sign out', sign_out_path %></p>
 	<% else %>
 		<p><%= link_to 'Sign in', sign_in_path %></p>
 	<% end %>
