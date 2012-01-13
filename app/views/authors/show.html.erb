@@ -1,6 +1,8 @@
+<% content_for :title, "#{@author.name}'s Articles" %>
+
 <article class="hentry">
 	<header>
-		<h1><%= @author.name %>'s Articles</h1>
+		<h1><%= @author.name %>&rsquo;s Articles</h1>
 		
 		<% if current_author %>
 			<ul class="inll article-actions">
