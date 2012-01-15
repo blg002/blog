@@ -9,7 +9,7 @@ class Article < ActiveRecord::Base
   has_many   :categories, through: :categorizations
   
   attr_writer :category_names
-  after_save :assign_categories
+  after_save  :assign_categories
   
   def category_names
     @category_names ||= categories.map(&:name).join(', ')
