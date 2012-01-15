@@ -1,0 +1,11 @@
+one:
+	article_id: 1
+	category_id: 1
+	
+two:
+	article_id: 1
+	category_id: 2
+	
+three:
+	article_id: 2
+	category_id: 1
