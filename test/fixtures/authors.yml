@@ -1,13 +1,13 @@
 brad:
-	name: Brad Graham
+  name: Brad Graham
   user_name: brad
-  email:  blg002@gmail.com
-	hashed_password: $2a$10$wnBGqAVhufFNfrZwFGXXyO1Q6h9B3FyfzfHifWfak3ajmWCUol9LS
-	salt: $2a$10$wnBGqAVhufFNfrZwFGXXyO
+  email: blg002@gmail.com
+  hashed_password: $2a$10$wnBGqAVhufFNfrZwFGXXyO1Q6h9B3FyfzfHifWfak3ajmWCUol9LS
+  salt: $2a$10$wnBGqAVhufFNfrZwFGXXyO
 
 max:
-	name: Max Powers
+  name: Max Powers
   user_name: max
-  email:  blg002@yahoo.com
-	hashed_password: $2a$10$UFlARhw8biJNPcU1YL9x8uDO9X7DgcBYVTHF2Kb/V8ihHviMeikqu
-	salt: $2a$10$UFlARhw8biJNPcU1YL9x8u
+  email: blg002@yahoo.com
+  hashed_password: $2a$10$UFlARhw8biJNPcU1YL9x8uDO9X7DgcBYVTHF2Kb/V8ihHviMeikqu
+  salt: $2a$10$UFlARhw8biJNPcU1YL9x8u
