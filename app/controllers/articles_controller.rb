@@ -5,21 +5,21 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
   
-  # GET /posts
+  # GET /articles
   def index
     @articles = Article.all
   end
   
-  # GET /posts/1
+  # GET /articles/1
   def show
   end
   
-  # GET /posts/new
+  # GET /articles/new
   def new
     @article = Article.new
   end
   
-  # POST /posts
+  # POST /articles
   def create
     @article = Article.new(params[:article])
     
@@ -30,14 +30,14 @@ class ArticlesController < ApplicationController
     end
   end
   
-  # PUT /posts/1
+  # PUT /articles/1
   def update
     @article.update_attributes(params[:article])
     
     redirect_to @article
   end
   
-  # DELETE /posts/1
+  # DELETE /articles/1
   def destroy
     @article.destroy
     flash[:notice] = "Article gone!"
