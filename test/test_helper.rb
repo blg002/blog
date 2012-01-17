@@ -10,8 +10,4 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  
-  def login_as(author)
-     @request.session[:author_id] = author ? author.id : nil
-  end
 end

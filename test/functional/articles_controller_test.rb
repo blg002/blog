@@ -1,12 +1,6 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
-  
-  setup do
-    @article = articles(:one)
-    login_as(:brad)
-  end
-  
   test "should get index" do
     get :index
     assert_response :success
