@@ -1,6 +1,14 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
+  
+  fixtures :articles, :authors
+  
+  setup do
+    @article = articles(:one)
+    login_as :brad
+  end
+  
   test "should get index" do
     get :index
     assert_response :success
@@ -43,4 +51,5 @@ class ArticlesControllerTest < ActionController::TestCase
 
     assert_redirected_to article_path
   end
+  
 end
