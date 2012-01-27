@@ -1,9 +1,9 @@
 one:
   title: Awesome title
   body: Look just because I don't be givin no man a foot massage
-  author_id: 1
+  author: brad
 
 two:
   title: The second articles title
   body: You happen to pull this while im in a transitional period
-  author_id: 2
+  author: max
