@@ -17,7 +17,7 @@ class AuthorsController < ApplicationController
     @author = Author.new(params[:author])
 
     if @author.save
-      redirect_to @author, notice: "Author successfully created"
+      redirect_to @author, notice: "Author successfully created."
     else
       render action: "new"
     end
