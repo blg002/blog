@@ -1,11 +1,11 @@
 one:
-  article_id: 1
-  category_id: 1
+  article: one
+  category: html
 
 two:
-  article_id: 1
-  category_id: 2
+  article: one
+  category: css
 
 three:
-  article_id: 2
-  category_id: 1
+  article: two
+  category: css
