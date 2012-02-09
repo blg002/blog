@@ -2,8 +2,16 @@
 
 <h1>Categories</h1>
 
-<ul>
-	<% @categories.each do |category| %>
-		<li><%= link_to category.name, category %> (<%= category.articles.length %>)</li>
-	<% end %>
+<ul id="categories">
+	<%= render @categories %>
 </ul>
+
+<%= form_for(Category.new, remote: true) do |category_form| %>
+	<ul>
+		<li>
+			<%= category_form.label :name %>
+			<%= category_form.text_field :name %>
+		</li>
+		<li class="button"><%= category_form.submit %></li>
+	</ul>
+<% end %>

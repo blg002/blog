@@ -12,15 +12,14 @@
 		<% end %>
 	</header>
 	
-	<div class="entry-content hfeed">
+	<ul>
 		<% @author.articles.reverse_each do |article| %>
-			<article class="hentry">
-				<h2 class="entry-title"><%= link_to article.title, article, rel: 'bookmark' %></h2>
-				<div class="entry-summary">
-					<%= raw truncate(article.body, length: 300) %>
-					<p><%= link_to 'Read more', article, rel: 'nofollow' %></p>
-				</div>
-			</article>
+			<%= content_tag_for(:li, article) do %>
+				<%= link_to article.title, article, rel: 'bookmark' %>
+				<% if current_author %>
+					(<%= link_to 'Delete', article, method: :delete, remote: true, class: 'delete' %>)
+				<% end %>
+			<% end %>
 		<% end %>
-	</div>
+	</ul>
 </article>

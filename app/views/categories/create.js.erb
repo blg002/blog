@@ -1,0 +1,6 @@
+<% if @category.new_record? %>
+	$('input#category_name').effect('highlight', {color: 'red});
+<% else %>
+	$('ul#categories').append("<%= escape_javascript(render @category) %>");
+	$('li#<%= dom_id(@category) %>').effect('highlight');
+<% end %>

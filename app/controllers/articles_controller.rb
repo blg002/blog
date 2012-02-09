@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  
   before_filter :get_article, only: [:show, :edit, :update, :destroy]
   
   def get_article
@@ -41,7 +42,14 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   def destroy
     @article.destroy
-    flash[:notice] = "Article gone!"
-    redirect_to articles_url
+    
+    respond_to do |format|
+      format.html { 
+        redirect_to articles_url
+        flash[:notice] = "Article gone!"
+      }
+      format.js
+    end
   end
+  
 end
