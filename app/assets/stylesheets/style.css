@@ -17,6 +17,3 @@ article { margin-bottom:2em; position:relative; }
 .article-actions a, a.delete { font-weight:bold; color:rgb(242,17,13); font-size:75%; text-decoration:none; text-transform:uppercase; }
 .article-actions a:hover, .article-actions a:active, .article-actions a:focus, a.delete:hover, a.delete:active, a.delete:focus { color:rgb(218,116,114); }
 .entry-summary > p { margin-top:0; }
-
-.flash { padding:0.5em; background-color:rgb(170,12,9); color:rgb(252,227,227); position:absolute; top:0; right:0; left:0; }
-
