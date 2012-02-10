@@ -17,3 +17,19 @@ article { margin-bottom:2em; position:relative; }
 .article-actions a, a.delete { font-weight:bold; color:rgb(242,17,13); font-size:75%; text-decoration:none; text-transform:uppercase; }
 .article-actions a:hover, .article-actions a:active, .article-actions a:focus, a.delete:hover, a.delete:active, a.delete:focus { color:rgb(218,116,114); }
 .entry-summary > p { margin-top:0; }
+
+.inline { padding-left:0; width:auto; overflow:hidden; list-style:none; }
+.inline li, .l-inline a { display:inline-block; float:none; }
+.upper { text-transform:uppercase; }
+.listless { list-style:none; padding-left:0; }
+.hidden { display:none !important; visibility:hidden; }
+.visuallyhidden { border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto; }
+.clear:before, .clear:after { content:""; display:table; }
+.clear:after { clear:both; }
+.clear { *zoom:1; }
+.center { text-align:center; }
+.first { margin-left:0 !important; }
+.last { margin-right:0 !important; }
+.left { float:left; margin-right:20px; margin-left:0 !important; }
+.right { float:right; margin-right:0 !important; margin-left:20px; }

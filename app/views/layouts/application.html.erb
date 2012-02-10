@@ -23,7 +23,7 @@
 <% end %>
 
 <nav>
-	<ul class="inll">
+	<ul class="inline">
 		<li><%= link_to 'Archive', articles_path %></li>
 		<li><%= link_to 'Authors', authors_path %></li>
 		<li><%= link_to 'Categories', categories_path %></li>
@@ -34,7 +34,7 @@
 
 <div id="menu">
 	<% if current_author %>
-		<ul class="inll">
+		<ul class="inline">
 			<li><%= link_to 'Create an article', new_article_path %></li>
 			<li><%= link_to 'Add an author', new_author_path %></li>
 			<li><%= link_to 'Create a category', new_category_path %></li>

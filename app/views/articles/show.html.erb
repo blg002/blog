@@ -8,7 +8,7 @@
 			<p class="date"><time datetime="<%= @article.created_at.strftime("%Y-	%m-%d:%H:%M%z") %>" class="published updated" pubdate><%= @article.created_at.strftime("#{@article.created_at.day.ordinalize} %b %Y") %></time></p>
 			<p class="vcard author">by <%= link_to @article.author.name, @article.author, class: 'fn n' %></p>
 
-			<ul class="nl categories">
+			<ul class="listless categories">
 				<% @article.categories.each do |category| %>
 					<li><%= link_to category.name, category, rel: 'tag' %></li>
 				<% end %>
@@ -16,7 +16,7 @@
 		</div>
 		
 		<% if current_author %>
-			<ul class="inll article-actions">
+			<ul class="inline article-actions">
 				<li class="edit"><%= link_to 'Edit', edit_article_path(@article) %></li>
 				<li class="delete"><%= link_to 'Delete', @article, confirm: "Are you sure you want to delete this article?", method: :delete %></li>
 			</ul>

@@ -5,7 +5,7 @@
 		<h1>List of articles categorized with: <%= @category.name %></h1>
 		
 		<% if current_author %>
-			<ul class="inll article-actions">
+			<ul class="inline article-actions">
 				<li class="edit"><%= link_to 'Edit', edit_category_path(@category) %></li>
 				<li class="delete"><%= link_to 'Delete', @category, confirm: "Are you sure you want to delete this category?", method: :delete %>
 			</ul>
